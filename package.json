@@ -1,0 +1,25 @@
+{
+  "name": "authflow",
+  "version": "1.0.0",
+  "description": "A comprehensive MERN-based authentication system featuring email verification, password recovery, and welcome emails for a secure and user-friendly experience.",
+  "main": "backend/index.js",
+  "scripts": {
+    "dev": "nodemon backend/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.7",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mailtrap": "^3.4.0",
+    "mongoose": "^8.9.2",
+    "nodemon": "^3.1.9"
+  }
+}
