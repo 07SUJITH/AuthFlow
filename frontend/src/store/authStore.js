@@ -10,7 +10,8 @@ import axios from "axios";
 
 axios.defaults.withCredentials = true; // to send cookies with requests
 
-const API_URL = "http://localhost:5000";
+const API_URL =
+  import.meta.env.MODE === "development" ? "http://localhost:5000" : "";
 /*
 zustand's create function is used to create a store.
 It takes a function as an argument and which should return an object. The object returned by the function is the store. that store can be used to store the state of the application and functions to update the state.
