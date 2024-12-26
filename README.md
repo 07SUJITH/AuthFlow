@@ -1,38 +1,59 @@
 # AuthFlow
 
-A comprehensive MERN-based authentication system featuring email verification, password recovery, and welcome emails for a secure and user-friendly experience.
+Authentication system featuring email verification, password recovery, and welcome emails for a secure and user-friendly experience.
 
-## Installation
+## Cloning the Repository
 
-```bash
-npm i express cookie-parser mailtrap bcryptjs dotenv jsonwebtoken mongoose crypto nodemon
-```
+To get a copy of this project up and running on your local machine, follow these steps:
 
-## Dependencies
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/07SUJITH/AuthFlow.git
+   ```
+2. **Navigate to the project directory**:
+   ```sh
+   cd AuthFlow
+   ```
+3. **Install dependencies**:
+   ```sh
+   npm install
+   ```
+4. **Set up environment variables**:
+   Follow the instructions in the [Environment Setup](#environment-setup) section to create and configure your `.env` file.
 
-- **express**: Web application framework
-- **cookie-parser**: Parse Cookie header and populate req.cookies
-- **mailtrap**: Email delivery platform for testing
-- **bcryptjs**: Password hashing utility
-- **dotenv**: Environment variables management
-- **jsonwebtoken**: JWT implementation for authentication
-- **mongoose**: MongoDB object modeling tool
-- **crypto**: Built-in Node.js crypto module for cryptographic operations
-- **nodemon**: Tool for automatically restarting Node.js applications during development
+5. **Run the application**:
+   ```sh
+   npm start
+   ```
+
+Your application should now be running on `http://localhost:5000`.
 
 ## Environment Setup
 
-1. Create a `.env` file in the root directory:
+To run this project, you will need to add the following environment variables to your `.env` file in the root directory of the project.
 
-```env
-MONGODB_URI=mongodb+srv://username:<db_password>@cluster0.skofr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+### Example `.env` file
+
+```properties
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.skofr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+PORT=5000
+JWT_SECRET=your_jwt_secret
+NODE_ENV=development
+MAILTRAP_API_TOKEN=your_mailtrap_api_token
+CLIENT_URL=http://localhost:5173
 ```
 
-## MongoDB Deployment
+### Environment Variables Description
 
-The project uses MongoDB Atlas for database hosting:
+- **MONGO_URI**: The connection string for your MongoDB database. Replace `<username>` and `<password>` with your MongoDB credentials.
+- **PORT**: The port number on which your server will run. Default is `5000`.
+- **JWT_SECRET**: A secret key for signing JSON Web Tokens (JWT). Replace `your_jwt_secret` with a strong secret key.
+- **NODE_ENV**: The environment in which the application is running. Typically `development` or `production`.
+- **MAILTRAP_API_TOKEN**: Your Mailtrap API token for sending emails. Replace `your_mailtrap_api_token` with your actual Mailtrap API token.
+- **CLIENT_URL**: The URL of your frontend application. Default is `http://localhost:5173`.
 
-- Cluster: Cluster0
-- Database Type: Free Tier
-- Connection Method: MongoDB URI
-- Authentication: Username and Password
+## Steps to Set Up
+
+1. Create a `.env` file in the root directory of your project.
+2. Copy the example content above into your `.env` file.
+3. Replace the placeholder values with your actual credentials and configuration.
